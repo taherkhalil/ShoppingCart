@@ -12,6 +12,12 @@
 <h1>hiii</h1>
 
  <c:out value="${username}"/> 
-<%-- <% out.print(this.getServletContext().getAttribute("username"));%> --%>
+ <form action="CreateSession" method= "post">
+Please Select item u want:<select name ="category" required= "required">
+<option value="">select</option>
+<option>watch</option>
+<option>belt</option>
+<option>hat</option>
+
 </body>
 </html>
