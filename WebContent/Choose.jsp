@@ -9,15 +9,17 @@
 <title>choose items</title>
 </head>
 <body>
+
 <h1>hiii</h1>
-
  <c:out value="${username}"/> 
- <form action="CreateSession" method= "post">
-Please Select item u want:<select name ="category" required= "required">
-<option value="">select</option>
-<option>watch</option>
-<option>belt</option>
-<option>hat</option>
+ <form action="Cart" method= "post">
+Please Select item u want:<select name ="items" required= "required" multiple="multiple">
 
+<option  value="watch">watch</option>
+<option value="belt">belt</option>
+<option value ="hat">hat</option>
+</select>
+<input type="submit" value ="add to cart" name="add">
+</form>
 </body>
 </html>

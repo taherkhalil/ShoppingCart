@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
   <display-name>Shopping</display-name>
-	
+  <servlet>
+		<servlet-name>Cart</servlet-name>
+		<servlet-class>project.shopping.Cart</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Cart</servlet-name>
+		<url-pattern>/Cart</url-pattern>
+	</servlet-mapping>
   <filter>
     <filter-name>AuthenticationFilter</filter-name>
     <filter-class>project.shopping.AuthenticationFilter</filter-class>
@@ -10,5 +20,4 @@
     <filter-name>AuthenticationFilter</filter-name>
     <url-pattern>/LoginPage</url-pattern>
   </filter-mapping>
-
 </web-app>
