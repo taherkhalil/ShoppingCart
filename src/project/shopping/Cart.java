@@ -59,14 +59,16 @@ public class Cart extends HttpServlet {
 			request.getRequestDispatcher("Display.jsp").include(request, response);
 			
 
-		} else if (request.getParameter("Delete") != null) {
-
-			int key = Integer.parseInt(request.getParameter("delete"));
-
+		} else if (request.getParameter("del") != null) {
+			
+			int key = Integer.parseInt(request.getParameter("key"));
+		
 			map.remove(key);
-			out.println("Item deleted successfully\n\n");
-			request.getRequestDispatcher("DisplayItem.jsp").include(request, response);
-			request.getRequestDispatcher("logout.jsp").include(request, response);
+			request.setAttribute("map", map);
+//			out.println("Item deleted successfully\n\n");
+			
+			request.getRequestDispatcher("Display.jsp").include(request, response);
+			//request.getRequestDispatcher("logout.jsp").include(request, response);
 		}
 
 	}

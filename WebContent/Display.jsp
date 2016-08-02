@@ -11,7 +11,12 @@
 <body>
 
 
-<c:forEach var ="map" items="${map}">  <td>${employeeSkills.key.name}</td></c:forEach>
+<c:forEach var ="map" items="${map}"> <td>${map.key}</td><br/><td>${map.value}<br/></td></c:forEach>
+<form action="Cart" method ="post">
+<input type="number" name=key value="enter the value to remove">
+<input type="submit" name="del" value="delete" ">
+
+</form>
 
 </body>
 </html>
