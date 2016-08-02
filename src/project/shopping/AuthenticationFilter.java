@@ -63,10 +63,7 @@ public class AuthenticationFilter implements Filter {
 			if (password.equals(db.database.get(username))) {
 		
 			System.out.println("logged in");
-//			HttpSession session = request2.getSession(true);
-//		
-//			session.setMaxInactiveInterval(100);
-//			session.setAttribute("session", session.getId());
+
 			Cookie cookie= new Cookie("username",username);
 			httpResponse.addCookie(cookie);
 			cookie.setMaxAge(1*60);
